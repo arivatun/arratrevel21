@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arra Trevel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/metro.min.css" rel="stylesheet">
+        <link href="assets/css/onepage-scroll.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-bar bg-gray">
+        <a class="app-bar-element" href="...">Arra Trevel</a>
+        <span class="app-bar-divider"></span>
+        <ul class="app-bar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="" class="dropdown-toggle">Products</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="paket1.html">Paket 4 Hari 3 Malam</a></li>
+                    <li><a href="paket2.html">Paket 3 Hari 2 Malam</a></li>
+                    <li><a href="paket3.html">Paket 2 Hari 1 Malam</a></li>
+                </ul>
+            </li>
+            <li><a href="kontak.html">Contact Us</a></li>
+        </ul>
+        </div>
+
+        <div id="main">
+        <section class="page-one">
+            <div class="container">
+            <div class="grid">    
+                <div class="row cells1">
+                    <div class="cell">
+                        <div class="carousel auto stop" id="carousel" data-controls="false" data-markers="false" data-effect="fade" data-height="300">
+                            <div class="slide"><img src="assets/img/1.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/2.jpeg" alt=""></div>
+                            <div class="slide"><img src="assets/img/3.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/4.jpg" alt=""></div>
+                        </div><hr>
+                        <p class="info">
+                            Liburan semakin seru dengan ARRA Trevel. Dapatkan Promo Liburan untuk semua paket dengan potongan harga hingga 40%
+                        </p><hr>untuk info lebih lanjut silakan hubungi kontak kami 
+                        </p>
+                        <p>WA : 082317166890</p>
+                        <p>Line : @Arratravel
+                        <div class="countdown" id="countdown" data-days="3"></div>
+                       
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        </div>
+    
+        <script src="assets/js/jquery-3.2.0.min.js"></script>
+        <script src="assets/js/jquery.onepage-scroll.js"></script>                    
+        <script src="assets/js/metro.min.js"></script>    
+        <script>
+            $(function(){
+                $("#carousel").carousel();
+            });
+
+            $(function(){
+                $("#countdown").countdown();
+            });
+
+            $("#main").onepage_scroll({
+                sectionContainer: "section",
+                easing: "cubic-bezier(0.180, 0.900, 0.410, 1.210)"
+            });
+
+            $("#bawah").click(function() {
+                $("#main").moveDown();
+            });
+        </script>    
+    </body>
+</html>
