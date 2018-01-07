@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Arra Trevel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/metro.min.css" rel="stylesheet">
+        <link href="assets/css/onepage-scroll.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-bar bg-gray">
+        <a class="app-bar-element" href="...">Arra Trevel</a>
+        <span class="app-bar-divider"></span>
+        <ul class="app-bar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="" class="dropdown-toggle">Products</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="paket1.html">Paket 4 Hari 3 Malam</a></li>
+                    <li><a href="paket2.html">Paket 3 Hari 2 Malam</a></li>
+                    <li><a href="paket3.html">Paket 2 Hari 1 Malam</a></li>
+                </ul>
+            </li>
+            <li><a href="kontak.html">Contact Us</a></li>
+        </ul>
+        </div>
+
+        <div id="main">
+        <section class="page-one">
+            <div class="container">
+            <div class="grid">    
+                <div class="row cells1">
+                    <div class="cell">
+                        <div class="carousel auto stop" id="carousel" data-controls="false" data-markers="false" data-effect="fade" data-height="300">
+                            <div class="slide"><img src="assets/img/1.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/2.jpeg" alt=""></div>
+                            <div class="slide"><img src="assets/img/3.jpg" alt=""></div>
+                            <div class="slide"><img src="assets/img/4.jpg" alt=""></div>
+                        </div><hr>
+                        <p class="info">
+                          <h4>Paket 4 Hari 3 Malam</h4>
+                          <p class="info">
+                            waktu paket 4 Hari 3 Malam, fasilitas yang didapatkan berupa Transportasi kapal penyebrangan karimunjwa PP, kapal wisata tour laut, mobil transportasi lokal. penginapan dengan adanya AC, makanan presmanan, BBQ dll, dokumentasi, perlengkapan menyelam dan Guide.
+                        </p>
+                        </p><hr>
+                        <h5>Dapatkan Promo Liburan untuk paket ini 40%</h5>
+                        <div class="countdown" id="countdown" data-days="3"></div>
+                        <button id="bawah" class="button">Daftar Sekarang</button>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="page-two">
+            <div class="container">
+            <div class="grid">  
+                <div class="row cells2">
+                    <div class="cell">
+                    <form>
+                        <h3>Silakan isi from untuk mendapatkan promo yang ada</h3>
+                        <div class="input-control text">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                        </div><br>
+                        <div class="input-control text">
+                            <input type="email" placeholder="Email" required>
+                        </div><br>
+                        <div class="input-control textarea" data-role="input" data-text-auto-resize="true">
+                            <textarea cols="60" placeholder="Pendapat anda terhadap layanan kami"></textarea>
+                        </div><br>
+                        <label class="input-control checkbox">
+                            <input type="checkbox" required>
+                            <span class="check"></span>
+                            <span class="caption">Saya menerima syarat & ketentuan yang berlaku</span>
+                        </label><br>
+                        <input type="reset" value="Reset">
+                        <input class="button" type="submit" value="Submit">
+                    </form>
+                    </div>
+
+                    <div class="cell">
+                        <h4>Jalan-jalan ke Karimunjawa Bro!!</h4>
+                        <p class="info">
+                            <div class="slide"><img src="assets/img/5.jpg" alt=""></div>
+                            <p>Pengen Snorking bareng ikan-ikan yukk buruan daftar sekarang dan dapatkan diskonnya</p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        </div>
+    
+        <script src="assets/js/jquery-3.2.0.min.js"></script>
+        <script src="assets/js/jquery.onepage-scroll.js"></script>                    
+        <script src="assets/js/metro.min.js"></script>    
+        <script>
+            $(function(){
+                $("#carousel").carousel();
+            });
+
+            $(function(){
+                $("#countdown").countdown();
+            });
+
+            $("#main").onepage_scroll({
+                sectionContainer: "section",
+                easing: "cubic-bezier(0.180, 0.900, 0.410, 1.210)"
+            });
+
+            $("#bawah").click(function() {
+                $("#main").moveDown();
+            });
+        </script>    
+    </body>
+</html>
